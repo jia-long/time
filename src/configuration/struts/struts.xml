@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="json-default">
+		<action name="test" class="web.action.UserAction">
+			<result type="json" />
+		</action>
+		<action name="param" class="web.action.TestAction">
+		    <result>/index.jsp</result>
+		</action>
+		<action name="regist" class="web.action.UserAction" method="regist">
+		  	 <result>/index.jsp</result>
+		</action>
+	</package>
+
+</struts>
